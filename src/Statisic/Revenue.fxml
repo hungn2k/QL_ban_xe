@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1038.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statisic.RevenueController" styleClass="bodybg" stylesheets="@../Style/statisic.css">
+    <children>
+        <Pane prefHeight="44.0" prefWidth="1044.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);">
+            <effect>
+                <DropShadow />
+            </effect></Pane>
+      <JFXTextField fx:id="txtTotal" disable="true" layoutX="771.0" layoutY="553.0" prefHeight="45.0" prefWidth="200.0">
+         <font>
+            <Font size="21.0" />
+         </font></JFXTextField>
+      <Label layoutX="771.0" layoutY="486.0" prefHeight="44.0" prefWidth="199.0" styleClass="fontradio" stylesheets="@../Style/revenue.css" text="TỔNG DOANH THU">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="lineChart" layoutX="14.0" layoutY="49.0" legendSide="RIGHT" prefHeight="360.0" prefWidth="998.0" stylesheets="@../Style/revenue.css" title="DOANH THU">
+        <xAxis>
+          <CategoryAxis prefHeight="13.0" prefWidth="933.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <JFXTextField fx:id="txtYear" labelFloat="true" layoutX="154.0" layoutY="560.0" prefHeight="44.0" prefWidth="167.0" promptText="Năm">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btLook" layoutX="843.0" layoutY="408.0" prefHeight="48.0" prefWidth="160.0" style="-fx-background-color: #2ecaea;" text="XEM">
+         <font>
+            <Font size="22.0" />
+         </font></JFXButton>
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+      <HBox layoutX="44.0" layoutY="482.0" prefHeight="68.0" prefWidth="554.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="140.0" text="       Từ">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtStart">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label prefHeight="30.0" prefWidth="119.0" text="  đến" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtEnd">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <JFXRadioButton fx:id="rbYear" layoutX="405.0" layoutY="443.0" styleClass="fontradio" stylesheets="@../Style/revenue.css" text="Thống kê theo năm">
+         <toggleGroup>
+            <ToggleGroup fx:id="ok" />
+         </toggleGroup>
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets right="60.0" />
+         </padding>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rbMonth" layoutX="93.0" layoutY="443.0" styleClass="fontradio" stylesheets="@../Style/revenue.css" text="Thống kê theo tháng" toggleGroup="$ok">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets right="60.0" />
+         </padding>
+      </JFXRadioButton>
+    </children>
+</AnchorPane>

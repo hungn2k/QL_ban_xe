@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXClippedPane?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginUI.LoginController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="620.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Style/Images/istockphoto-547022402-170667a.jpg" />
+         </image>
+      </ImageView>
+      <JFXClippedPane layoutX="146.0" layoutY="228.0" />
+      <JFXTextField fx:id="usernameField" labelFloat="true" layoutX="188.0" layoutY="139.0" prefHeight="25.0" prefWidth="243.0" promptText="Enter your Username" styleClass="username" stylesheets="@../Style/login.css" />
+      <JFXPasswordField fx:id="passwordField" labelFloat="true" layoutX="188.0" layoutY="198.0" prefHeight="25.0" prefWidth="243.0" promptText="Enter your Password" styleClass="username" stylesheets="@../Style/login.css" />
+      <JFXButton fx:id="loginButton" layoutX="335.0" layoutY="248.0" onAction="#Login" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #2196f3;" text="Đăng nhập" textFill="#fbf4f4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox checkedColor="#119c6d" layoutX="188.0" layoutY="256.0" styleClass="username" stylesheets="@../Style/login.css" text="Nhớ tôi" textAlignment="CENTER" textFill="#efefef" unCheckedColor="#e6dfdf">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXButton layoutX="229.0" layoutY="292.0" styleClass="buttonForgot" stylesheets="@../Style/login.css" text="Bạn quên mật khẩu?" textFill="#a0a2ab" underline="true" />
+      <ImageView fitHeight="123.0" fitWidth="161.0" layoutX="229.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Style/Images/car.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="48.0" layoutX="140.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Style/Images/person_47797.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="48.0" layoutX="140.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Style/Images/internet_lock_locked_padlock_password_secure_security_icon_127078.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

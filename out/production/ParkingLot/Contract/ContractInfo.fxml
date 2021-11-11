@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contract.ContractInfoController">
+    <children>
+        <JFXButton fx:id="btUpdate" buttonType="RAISED" layoutX="628.0" layoutY="599.0" onAction="#UpdateInfo" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #fa8231;" text="Cập nhật" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+      </JFXButton>
+        <Pane layoutX="-1.0" layoutY="-2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="871.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);">
+         <children>
+            <ImageView fx:id="btBack" fitHeight="43.0" fitWidth="76.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Style/Images/arrow_left_15601.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <HBox layoutX="29.0" layoutY="48.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="811.0" style="-fx-background-color: #f9f9f9;">
+         <children>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="367.0" style="-fx-background-color: #f9f9f9; -fx-background-radius: 25;">
+               <HBox.margin>
+                  <Insets bottom="80.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <JFXTextField fx:id="txtInfoID" disable="true" labelFloat="true" promptText="ID">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="16.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="18.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtCusInfo" disable="true" labelFloat="true" promptText="Chủ sở hữu">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtLienceInfo" labelFloat="true" promptText="Biển số xe">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="cbGroup" labelFloat="true" prefHeight="68.0" prefWidth="345.0" promptText="Loại xe" style="-fx-font-size: 22;" stylesheets="@../Style/main.css" VBox.vgrow="SOMETIMES">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="-2.0" top="10.0" />
+                     </padding>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="txtNameInfo" labelFloat="true" promptText="Tên xe">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </VBox>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="367.0" style="-fx-background-color: #f9f9f9; -fx-background-radius: 25;">
+               <HBox.margin>
+                  <Insets bottom="60.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <JFXDatePicker fx:id="dpInputInfo"  promptText="Ngày gửi" stylesheets="@../Style/customer.css">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="-20" top="20.0" />
+                     </padding>
+
+                     <VBox.margin>
+                        <Insets bottom="10" top="10" right="-20"/>
+                     </VBox.margin>
+
+                  </JFXDatePicker>
+                  <JFXDatePicker fx:id="dpOutputInfo"  promptText="Hạn gửi" stylesheets="@../Style/customer.css">
+                     <padding>
+                        <Insets bottom="0" left="20.0" right="-20" top="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="40.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXDatePicker>
+                  <JFXTextField fx:id="txtPricePerMonth" disable="true" labelFloat="true" promptText="Giá tiền/ tháng (VNĐ)">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtWeight" labelFloat="true" promptText="Trọng lượng (Tấn)">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtTotal" disable="true" labelFloat="true" promptText="Thành tiền (VNĐ)">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="lbCheckDate" layoutX="72.0" layoutY="603.0" prefHeight="50.0" prefWidth="322.0" text="Hạn gửi phải lớn hơn ngày gửi" textFill="#d70606" visible="false">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

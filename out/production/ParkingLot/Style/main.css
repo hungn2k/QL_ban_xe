@@ -1,0 +1,52 @@
+.button1 {
+    -fx-background-image: url("Images/customer4.png");
+    -fx-background-size: 180px;
+    -fx-background-repeat: no-repeat;
+    /*-fx-background-position: 90%;*/
+    -fx-background-color: transparent;
+    -fx-background-radius: 400;
+}
+
+.button2 {
+    -fx-background-image: url("Images/contract.png");
+    -fx-background-size: 160px;
+    -fx-background-repeat: no-repeat;
+    /*-fx-background-position: 90%;*/
+    -fx-background-color: transparent;
+    -fx-background-radius: 400;
+}
+
+.button3 {
+    -fx-background-image: url("Images/pie_chart_icon_129403.png");
+    -fx-background-size: 160px;
+    -fx-background-repeat: no-repeat;
+    /*-fx-background-position: 90%;*/
+    -fx-background-color: transparent;
+    -fx-background-radius: 450;
+}
+
+.button4 {
+    -fx-background-image: url("Images/iconfinder-basket-4341280_120547.png");
+    -fx-background-size: 160px;
+    -fx-background-repeat: no-repeat;
+    /*-fx-background-position: 90%;*/
+    -fx-background-color: transparent;
+    -fx-background-radius: 450;
+}
+
+.label{
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+.cart-white{
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0), 6.0, 0.7, 0.0, 1.5);
+}
+
+.combo-box>.list-cell {
+
+    -fx-text-alignment: center;
+}
+

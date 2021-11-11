@@ -1,0 +1,105 @@
+.chart {
+    -fx-padding: 10px;
+    -fx-font-size: 14;
+
+}
+.chart-content {
+    -fx-padding: 30px;
+}
+
+.chart-title {
+    -fx-text-fill: #4682b4;
+    -fx-font-size: 3.0em;
+    -fx-font-weight: bold;
+
+}
+
+.axis-label {
+    -fx-text-fill: #4682b4;
+    -fx-font-size: 18;
+}
+
+.chart-legend {
+    -fx-background-color:  transparent;
+    -fx-padding: 20px;
+}
+
+.chart-legend-item-symbol{
+    -fx-background-radius: 0;
+}
+
+.chart-legend-item{
+    -fx-text-fill: #191970;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #3278fa;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #3278fa;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+.axis {
+    -fx-font-size: 1.4em;
+    -fx-tick-label-fill: #914800;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+
+.axis-label {
+    -fx-text-fill: #462300;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 4px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: green;
+    -fx-background-image: null;
+}
+.radio-button -radio:armed {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:determinate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+}
+
+.fontradio{
+    -fx-font-weight: bold;
+}
+
+.default-color0.chart-area-symbol { -fx-background-color: #e9967a, #ffa07a; }
+.default-color1.chart-area-symbol { -fx-background-color: #f0e68c, #fffacd; }
+.default-color2.chart-area-symbol { -fx-background-color: #dda0dd, #d8bfd8; }
+
+.default-color0.chart-series-area-line { -fx-stroke: #e9967a; }
+.default-color1.chart-series-area-line { -fx-stroke: #f0e68c; }
+.default-color2.chart-series-area-line { -fx-stroke: #dda0dd; }
+
+.default-color0.chart-series-area-fill { -fx-fill: #ffa07aaa}
+.default-color1.chart-series-area-fill { -fx-fill: #fffacd77; }
+.default-color2.chart-series-area-fill { -fx-fill: #d8bfd833; }

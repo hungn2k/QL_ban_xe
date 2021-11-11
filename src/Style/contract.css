@@ -1,0 +1,15 @@
+.my-button {
+    -fx-graphic: url("/Style/Images/refreshpage_87245.png");
+    -fx-background-size: 1px 1px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+
+.my-button:hover {
+    -fx-graphic: url("/Style/Images/refreshicon_87885.png");
+}
+.bodybg{
+    -fx-background-image: url("/Style/Images/white-grey.jpg");
+    -fx-background-size: 100% 100%;
+}

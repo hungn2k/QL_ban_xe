@@ -1,0 +1,8 @@
+.bodybg{
+    -fx-background-image: url("/Style/Images/white-grey.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.pane{
+    -fx-background-color:  linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);
+}

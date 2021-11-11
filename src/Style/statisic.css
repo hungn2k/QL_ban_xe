@@ -1,0 +1,21 @@
+.chart {
+    -fx-padding: 10px;
+    -fx-font-size: 14;
+
+}
+.chart-content {
+    -fx-padding: 12px;
+}
+
+.chart-title {
+    -fx-text-fill: #4682b4;
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+
+}
+
+.bodybg{
+    -fx-background-image: url("/Style/Images/white-grey.jpg");
+    -fx-background-size: 100% 100%;
+
+}

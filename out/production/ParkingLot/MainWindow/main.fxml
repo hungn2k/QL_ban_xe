@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindow.Controller">
+   <children>
+      <ImageView fitHeight="507.0" fitWidth="665.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Style/Images/concrete-bricks-wall.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutY="26.0" prefHeight="481.0" prefWidth="665.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="283.0" minHeight="10.0" prefHeight="233.00000381469727" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="257.9999872843424" minHeight="0.0" prefHeight="17.333343505859403" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="406.6666717529297" minHeight="10.0" prefHeight="229.999989827474" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="btCustomer" alignment="CENTER" layoutX="78.0" layoutY="27.0" onAction="#ChangeToCustomer" prefHeight="179.0" prefWidth="177.0" styleClass="button1" stylesheets="@../Style/main.css" text="  ">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="1.0" green="1.0" red="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#52d3e2" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <Label layoutX="126.0" layoutY="197.0" prefHeight="36.0" prefWidth="177.0" stylesheets="@../Style/main.css" text="DSKH" textAlignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <JFXButton fx:id="btContract" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="31.0" onAction="#ChangeToContract" prefHeight="172.0" prefWidth="166.0" styleClass="button2" stylesheets="@../Style/main.css" text="  ">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#751b36" />
+                              <Stop color="#5a8d4c" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill></JFXButton>
+                  <Label layoutX="98.0" layoutY="197.0" prefHeight="36.0" prefWidth="213.0" stylesheets="@../Style/main.css" text="HỢP ĐỒNG" textAlignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="27.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="274.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Style/Images/dot_list_menu_nav_navigation_option_preference_icon_123238.png" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="overflowMenu" layoutX="243.0" layoutY="56.0" prefHeight="56.0" prefWidth="82.0" styleClass="cart-white" stylesheets="@../Style/main.css" visible="false">
+                     <children>
+                        <JFXButton fx:id="btLogout" prefHeight="25.0" prefWidth="83.0" text="Đăng xuất" />
+                        <JFXButton fx:id="btExit" onAction="#Exit" prefHeight="25.0" prefWidth="77.0" text="Thoát" />
+                     </children>
+                  </VBox>
+                  <JFXButton fx:id="btTest" layoutX="270.0" layoutY="5.0" prefHeight="51.0" prefWidth="58.0" text=" " />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <JFXButton fx:id="btChart" layoutX="89.0" layoutY="14.0" onAction="#ChangeToStatisic" prefHeight="172.0" prefWidth="155.0" styleClass="button3" stylesheets="@../Style/main.css" text=" ">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#52d3e2" />
+                              <Stop color="#020f11" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+                  <Label layoutX="21.0" layoutY="180.0" prefHeight="36.0" prefWidth="305.0" stylesheets="@../Style/main.css" text="THỐNG KÊ TÀI CHÍNH" textAlignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <JFXButton fx:id="btAddContract" layoutX="85.0" layoutY="14.0" onAction="#ChangeToAddContract" prefHeight="158.0" prefWidth="177.0" styleClass="button4" stylesheets="@../Style/main.css" text=" ">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#52d3e2" />
+                              <Stop color="#44206b" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+                  <Label alignment="CENTER" layoutX="52.0" layoutY="180.0" prefHeight="36.0" prefWidth="242.0" stylesheets="@../Style/main.css" text="THÊM HỢP ĐỒNG" textAlignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

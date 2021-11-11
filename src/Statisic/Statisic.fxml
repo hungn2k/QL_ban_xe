@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1038.0" styleClass="bodybg" stylesheets="@../Style/statisic.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statisic.StatisicController">
+    <children>
+        <JFXButton fx:id="btRevenue" buttonType="RAISED" layoutX="823.0" layoutY="421.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#ShowRevenue" prefHeight="51.0" prefWidth="184.0" style="-fx-background-color: #0fb9b1;" text="Xem doanh số" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+            <effect>
+                <DropShadow />
+            </effect>
+        </JFXButton>
+        <Pane prefHeight="44.0" prefWidth="1044.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);">
+            <effect>
+                <DropShadow />
+            </effect>
+         <children>
+            <ImageView fx:id="btBack" fitHeight="44.0" fitWidth="64.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Style/Images/arrow_left_15601.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+        <Label fx:id="lbCheck" layoutX="173.0" layoutY="59.0" prefHeight="38.0" prefWidth="258.0" text="Chưa đủ thông tin" textFill="#e81818" visible="false">
+            <font>
+                <Font size="22.0" />
+            </font></Label>
+        <Label fx:id="lbChoose" layoutX="154.0" layoutY="59.0" prefHeight="38.0" prefWidth="258.0" text="Chưa chọn khách hàng" textFill="#da1212" visible="false">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+      <AreaChart fx:id="barChartGroup" layoutX="22.0" layoutY="67.0" prefHeight="330.0" prefWidth="486.0" stylesheets="@../Style/statisic.css" title="SỐ XE TỪNG LOẠI">
+        <xAxis>
+          <CategoryAxis label="Loại xe" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Số xe" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <PieChart fx:id="pieChart" focusTraversable="true" labelLineLength="0.0" labelsVisible="false" layoutX="400.0" layoutY="357.0" legendSide="LEFT" prefHeight="264.0" prefWidth="352.0" stylesheets="@../Style/statisic.css" title="TỶ LỆ % TỪNG LOẠI" />
+      <VBox layoutX="67.0" layoutY="407.0" prefHeight="161.0" prefWidth="301.0">
+         <children>
+            <JFXRadioButton fx:id="rbDate" prefHeight="50.0" prefWidth="307.0" text="THỜI GIAN TÙY CHỌN">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </JFXRadioButton>
+            <JFXDatePicker fx:id="dpInput" stylesheets="@../Style/customer.css" disable="true">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXDatePicker fx:id="dpOutput" stylesheets="@../Style/customer.css" disable="true">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+         </children>
+      </VBox>
+      <BarChart fx:id="barChartPrice" layoutX="521.0" layoutY="62.0" prefHeight="330.0" prefWidth="486.0" stylesheets="@../Style/statisic.css" title="SỐ TIỀN THU ĐƯỢC TỪNG LOẠI">
+        <xAxis>
+          <CategoryAxis label="Loại xe" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis prefHeight="222.0" prefWidth="67.0" side="LEFT" />
+        </yAxis>
+      </BarChart>
+    </children>
+</AnchorPane>
